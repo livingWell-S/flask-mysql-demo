@@ -1,3 +1,6 @@
 flask/src/__pycache__
+flask/src/models/__pycache__
+flask/src/migrations/__pycache__
+flask/src/migrations/versions/__pycache__
 
 mysql/mysql_data
