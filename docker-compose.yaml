@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: ./flask/
+    ports:
+      - "80:5000"
+    volumes:
+      - ./flask/src:/code
+  db:
+    build: ./mysql/
+    volumes:
+      - ./mysql/mysql_data:/var/lib/mysql
+      - ./mysql/sqls:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=hoge
